@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree&family=Caveat&family=Montserrat:ital,wght@0,400;1,200&family=Open+Sans:ital@1&family=Outfit&family=PT+Sans&family=Pacifico&family=Raleway&family=Roboto&family=Varela&family=Varela+Round&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <form name="form1" class="form_container">
+
+        <div class="error"></div>
+
+            
+
+                <div>
+                    <input autocomplete="off" placeholder="Enter your name" name="uname">
+                 </div>
+    
+                 <div id="cate">
+                   <input type="radio" id="btn1" name="category"><label for="btn1" >General Feedback</label>
+                   <input type="radio" id="btn2" name="category"><label for="btn2">Technical  issue</label>
+                   <input type="radio" id="btn3" name="category"><label for="btn3">Data lost issue</label>
+                </div>
+    
+                <div>
+                    <input autocomplete="off" placeholder="your@gmail.com" name="email" >
+                </div>
+    
+                <div>
+                    <textarea  name="feedback" placeholder="Enter your feedback briefly" ></textarea>
+                </div>
+    
+                <div id="check">
+                    <input name="cbox" type="checkbox"><label for="check">I accept the terms and contion for this form </label>
+                </div>
+    
+                <div>
+                    <button >Submit</button>
+                </div>
+    
+           
+
+        </form>
+    </div>
+
+    <script src="./form.js"> </script>
+</body>
+</html>

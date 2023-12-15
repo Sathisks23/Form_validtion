@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div{
+            display: flex;
+            margin:0 auto;
+            width: 70%;
+            gap: 20px;
+        }
+        h1{
+            color: blue;
+        }
+        span{
+            width: 50px;
+            height: 25px;
+            background-color: black;
+            color: white;
+            display: inline-block;
+            text-align: center;
+            padding: 15px;
+        }
+        img{
+            width: 400px;
+        }
+        input{
+            width: 100%;
+           border: none;
+        }
+        input:focus{
+            outline: none;
+        }
+        b{
+            display: block;
+            
+        }
+        .para{
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="div">
+        <img src="./gift.webp" alt="">
+        <div class="timer">
+            <h1 >Counting</h1>
+            <input id="input"  value="Ends on saturday 2 december 2023 11:30" class="content">
+            <p class="para">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, quas inventore 
+
+            </p>
+            <span ><b id="D">0</b>   <small>Days</small></span>  
+            <span> <b id="H">0</b>  <small>Hours</small></span> 
+            <span ><b id="M">0</b>  <small>Minutes</small></span> 
+            <span ><b id="S">0</b> <small>Secs</small></span> 
+            
+            
+        </div>
+    </div>
+
+    <script>
+
+        let days = document.getElementById('D')
+        let hour = document.getElementById('H')
+        let min = document.getElementById('M')
+        let sec = document.getElementById('S')
+        
+       a= setInterval(()=>{
+        let input = document.getElementById('input')
+        let give_date = new Date(input.value.slice(8))
+        console.log(give_date.getTime());
+
+            let current_Date = new Date().getTime()
+             let    g_time = give_date.getTime()
+
+          let diff = g_time-current_Date
+           
+// console.log(current_Date.getDate());
+             console.log("diff : "+diff)
+            days.innerHTML = Math.floor(diff/86400000)
+            console.log("days : "+Math.floor(diff/86400000))
+               hour.innerHTML =  Math.floor(diff%86400000/3600000)
+               console.log("hour : "+Math.floor(diff%86400000/3600000))
+               min.innerHTML =Math.floor(diff%3600000/60000)
+               console.log("min : "+Math.floor(diff%3600000/60000))
+               sec.innerHTML = Math.floor(diff%60000/1000)
+
+               console.log("sec : "+Math.floor(diff%60000/1000))
+               
+
+        },1000)
+
+
+    </script>
+</body>
+</html>
